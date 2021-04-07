@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="./static/styles/styles.css">
+    <title>Post room app</title>
+</head>
+<body>
+    <header id="site-header">
+        <div class="container site-header__container">
+                <div class="logo">
+                    <a href="/" class="logo-link">PostRoom <i class="fas fa-signature"></i></a>
+                </div>
+                <ul class="user-actions">
+                    <li class="user-actions__item"><a href="/" class="user-actions__link">Home</a></li>
+                    <li class="user-actions__item"><a href="/articles" class="user-actions__link">Articles</a></li>
+                    <li class="user-actions__item"><a href="/create" class="user-actions__link">Write a Post <i class="fas fa-feather-alt"></i>  </a></li>
+                </ul>
+        </div>
+    </header>
+
+    <main id="details-page">
+        <div class="detail-box">
+            <div class="img-box">
+
+            </div>
+            <h3 class="detail-title"><%=article.title %></h3>
+            <div class="detail-body">
+                <p><%=article.blog %></p>
+            </div>
+            <div class="detail-footer">
+                <h4><%=article.author %></h4>
+                <h4>12/12/12</h4>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="footer-text">
+            <p><a href="/" class="logo-link">PostRoom <i class="fas fa-signature"></i></a> 2021 copyright all rights reserved</p>
+        </div>
+    </footer>
+
+</body>
+</html>

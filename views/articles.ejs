@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="./static/styles/styles.css">
+    <title>Post room app</title>
+</head>
+<body>
+    <header id="site-header">
+        <div class="container site-header__container">
+                <div class="logo">
+                    <a href="/" class="logo-link">PostRoom <i class="fas fa-signature"></i></a>
+                </div>
+                <ul class="user-actions">
+                    <li class="user-actions__item"><a href="/" class="user-actions__link">Home</a></li>
+                    <li class="user-actions__item"><a href="#" class="user-actions__link">Articles</a></li>
+                    <li class="user-actions__item"><a href="/create" class="user-actions__link">Write a Post <i class="fas fa-feather-alt"></i>  </a></li>
+                </ul>
+        </div>
+    </header>
+
+    <main id="articles-main">
+        <div class="container">
+            <h2>All notes</h2>
+
+                <ul class="articles-list">
+                    <% for(let article of articles){ %>
+            
+                        <li class="articles__item">
+                          <a class="articles__link" href="<%=article.id %>">
+                            <h3 class="articles__title"><%=article.title %></h3>
+                            
+                            <div class="articles__wrapper">
+                              <p class="articles__author"><%=article.author %></p>
+                              <p class="articles__date"><%=article.date %></p>
+                            </div>
+                          </a>
+                          
+                          <a class="articles__delete" href="#">Delete</a>
+                        </li>
+                        
+                        <% } %>
+                </ul>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="footer-text">
+            <p><a href="/" class="logo-link">PostRoom <i class="fas fa-signature"></i></a> 2021 copyright all rights reserved</p>
+        </div>
+    </footer>
+
+</body>
+</html>

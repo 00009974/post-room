@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="./static/styles/styles.css">
+    <title>Post room app</title>
+</head>
+<body>
+    <header id="site-header">
+        <div class="container site-header__container">
+                <div class="logo">
+                    <a href="#" class="logo-link">PostRoom <i class="fas fa-signature"></i></a>
+                </div>
+                <ul class="user-actions">
+                    <li class="user-actions__item"><a href="#" class="user-actions__link">Home</a></li>
+                    <li class="user-actions__item"><a href="/articles" class="user-actions__link">Articles</a></li>
+                    <li class="user-actions__item"><a href="/create" class="user-actions__link">Write a Post <i class="fas fa-feather-alt"></i>  </a></li>
+                </ul>
+        </div>
+    </header>
+    <section id="hero">
+        <div class="container hero-container">
+            <div class="col-6">
+                <div class="text-box">
+                    <h1>Turn your ideas into reality. <img class="text-box__img" src="/static/images/lamp idea.jpg" alt="coffee" width="50px" height="50px"> </h1>
+                    <p>This is a simple tool for your big ideas which takes care of your creativities
+                    </p>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="img-box">
+                    <img src="/static/images/img-box.png" alt="content image" width="500px", height="500px">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main id="main">
+        <div class="container">
+            <h2 class="main-title">Articles</h2>
+            <div class="main-body">
+                <ul class="articles js-articles">
+
+                    <% for(let article of articles){ %>
+                    <li class="article js-article">
+                        <div class="card">
+                                <img src="/static/images/example.svg.jfif" alt="example">
+                            <div class="card-body">
+                                <h3 class="card-title"><%=article.title %></h3>
+                                <p class="card-text"><%=article.blog %></p>
+                                <div class="card-footer">
+                                    <div class="card-username"><%=article.author %></div>
+                                    <div class="card-date">May 20th 2020</div>
+                                    <a href="<%=article.id %>" class="card-addl">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <% } %>
+                    
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="footer-text">
+            <p><a href="#" class="logo-link">PostRoom <i class="fas fa-signature"></i></a> 2021 copyright all rights reserved</p>
+        </div>
+    </footer>
+
+</body>
+</html>
